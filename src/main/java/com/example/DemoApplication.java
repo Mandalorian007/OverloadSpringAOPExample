@@ -1,6 +1,8 @@
 package com.example;
 
 import com.example.test.CoolClass;
+import com.example.test.CustomClass;
+import com.example.test.EpicClass;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,5 +22,7 @@ public class DemoApplication implements CommandLineRunner {
     public void run(String... strings) throws Exception {
         coolClass.execute(1L);
         coolClass.execute("awesomeText");
+        coolClass.execute(new CustomClass("TotallyCustom"));
+        coolClass.execute(new EpicClass("epicText"));
     }
 }

@@ -23,4 +23,15 @@ public class AspectLogger {
     public void logInterceptString(JoinPoint joinPoint) {
         System.out.println("Aspect Log of execute(String): " + joinPoint.getArgs()[0]);
     }
+
+    //@Before("execution(* com.example.test.CoolClass.execute(CustomClass))")
+    @Before("execution(* com.example.test.CoolClass.execute(com.example.test.CustomClass))")
+    public void logInterceptCustomClass(JoinPoint joinPoint) {
+        System.out.println("Aspect Log of execute(CustomClass): " + joinPoint.getArgs()[0]);
+    }
+
+    @Before("execution(* com.example.test.CoolClass.execute(com.example.test.EpicClass))")
+    public void logInterceptEpicClass(JoinPoint joinPoint) {
+        System.out.println("Aspect Log of execute(EpicClass): " + joinPoint.getArgs()[0]);
+    }
 }

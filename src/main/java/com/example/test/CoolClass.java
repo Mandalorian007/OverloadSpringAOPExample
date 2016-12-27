@@ -12,4 +12,12 @@ public class CoolClass {
     public void execute(String myText) {
         System.out.println(myText);
     }
+
+    public void execute(CustomClass customClass) {
+        System.out.println(customClass);
+    }
+
+    public void execute(EpicClass epicClass) {
+        System.out.println(epicClass);
+    }
 }
